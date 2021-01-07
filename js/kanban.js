@@ -32,7 +32,7 @@ const create_item = () => {
   let input = document.createElement('input');
   item.append(input);
 
-  let save_btn = document.createElement('button');
+  const save_btn = document.createElement('button');
   save_btn.innerHTML = 'Save';
   save_btn.addEventListener('click',()=>{
     error.innerHTML = '';
