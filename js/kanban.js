@@ -23,6 +23,11 @@ const create_item = () => {
   item.addEventListener('dragstart',(event)=>{
     return event.dataTransfer.setData('text',event.target.id);
   })
+  item.addEventListener('dragend',(event)=>{
+    return event.dataTransfer.clearData();
+  })
+  let input = document.createElement('input');
+  item.append(input);
 };
 
 document.querySelectorAll('.drop').forEach(element => {
