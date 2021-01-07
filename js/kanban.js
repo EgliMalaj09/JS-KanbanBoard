@@ -44,7 +44,7 @@ const create_item = () => {
       error.innerHTML = message;
     }
   });
-  item.appendChild(ssave_btn);
+  item.appendChild(save_btn);
 
   return item;
 };
