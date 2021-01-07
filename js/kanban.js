@@ -32,7 +32,7 @@ const create_item = () => {
   let input = document.createElement('input');
   item.append(input);
 
-  const save_btn = document.createElement('button');
+  let save_btn = document.createElement('button');
   save_btn.innerHTML = 'Save';
   save_btn.addEventListener('click',()=>{
     error.innerHTML = '';
@@ -44,9 +44,7 @@ const create_item = () => {
       error.innerHTML = message;
     }
   });
-
-  item.appendChild(save_btn);
-
+  item.appendChild(ssave_btn);
 
   return item;
 };
