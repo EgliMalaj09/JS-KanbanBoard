@@ -20,14 +20,28 @@ const create_item = () => {
   item.classList.add('item');
   item.id= 'item-' + order;
   item.draggable = true;
+
   item.addEventListener('dragstart',(event)=>{
     return event.dataTransfer.setData('text',event.target.id);
   })
+  
   item.addEventListener('dragend',(event)=>{
     return event.dataTransfer.clearData();
   })
+  
   let input = document.createElement('input');
   item.append(input);
+
+  let save_btn = document.createElement('button');
+  save_btn.innerHTML = 'Save';
+  save_btn.addEventListener('click',()=>{
+    error.innerHTML = '';
+    if(input.value !==''){
+      order += 1;
+      item.innerHTML = input.value;
+      adding.classList.toggle = false;
+    }
+  })
 };
 
 document.querySelectorAll('.drop').forEach(element => {
