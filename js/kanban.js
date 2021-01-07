@@ -44,7 +44,7 @@ const create_item = () => {
       error.innerHTML = message;
     }
   })
-  item.append(save_btn);
+  item.appendChild(save_btn);
 
 
   return item;
@@ -55,7 +55,7 @@ document.querySelectorAll('.drop').forEach(element => {
   element.addEventListener('drop',(event)=>{
     event.preventDefault();
     const id = event.dataTransfer.getData('text');
-    event.target.append(document.getElementById('id'));
+    event.target.appendChild(document.getElementById('id'));
   })
   element.addEventListener('dragover',(event)=>{
     event.preventDefault();
